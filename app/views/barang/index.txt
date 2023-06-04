@@ -1,0 +1,39 @@
+<form>
+<div class="mb-3">
+    <label for="" class="form-label">Nama Barang</label>
+    <input type="" class="form-control" id="">
+</div>
+<div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Dekripsi Barang</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<div class="mb-3">
+    <label for="" class="form-label">Tempat ditemukan</label>
+    <input type="" class="form-control" id="">
+</div>
+<div class="mb-3">
+    <label for="" class="form-label">Tanggal ditemukan</label>
+    <input type="date" class="form-control" id="">
+</div>
+<div class="mb-3">
+    <label for="formFile" class="form-label">Foto Barang</label>
+    <input class="form-control" type="file" id="formFile">
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div class="container mt-4 ml-4">
+    <div class="row d-flex justify-content-center">
+        <div class="col-9">
+            <h3>Upload Barang</h3>
+                <?php foreach($data['upload'] as $upload) : ?>
+                    <ul>
+                        <li><?= $upload['nama_barang'] ?></li>
+                        <li><?= $upload['dekripsi_barang'] ?></li>
+                        <li><?= $upload['tempat'] ?></li>
+                        <li><?= $upload['tanggal'] ?></li>
+                    </ul>
+                <?php endforeach; ?>
+        </div>
+    </div>
+</div>
